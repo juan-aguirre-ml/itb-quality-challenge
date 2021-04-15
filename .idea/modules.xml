@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bookings/bookings.iml" filepath="$PROJECT_DIR$/bookings/bookings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/itb-quality-challenge.iml" filepath="$PROJECT_DIR$/.idea/itb-quality-challenge.iml" />
+    </modules>
+  </component>
+</project>
