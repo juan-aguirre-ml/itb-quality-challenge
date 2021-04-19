@@ -1,0 +1,122 @@
+[
+  {
+    "hotelCode": "CH-0002",
+    "hotelName": "Cataratas Hotel",
+    "location": "Puerto Iguazú",
+    "roomType": "Doble",
+    "pricePerNight": 6300,
+    "availableFrom": "10/02/2021",
+    "availableTo": "20/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "CH-0003",
+    "hotelName": "Cataratas Hotel 2",
+    "location": "Puerto Iguazú",
+    "roomType": "Triple",
+    "pricePerNight": 8200,
+    "availableFrom": "10/02/2021",
+    "availableTo": "23/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "HB-0001",
+    "hotelName": "Hotel Bristol",
+    "location": "Buenos Aires",
+    "roomType": "Single",
+    "pricePerNight": 5435,
+    "availableFrom": "10/02/2021",
+    "availableTo": "19/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "BH-0002",
+    "hotelName": "Hotel Bristol 2",
+    "location": "Buenos Aires",
+    "roomType": "Doble",
+    "pricePerNight": 7200,
+    "availableFrom": "12/02/2021",
+    "availableTo": "17/04/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "SH-0002",
+    "hotelName": "Sheraton",
+    "location": "Tucumán",
+    "roomType": "Doble",
+    "pricePerNight": 5790,
+    "availableFrom": "17/04/2021",
+    "availableTo": "23/05/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "SH-0001",
+    "hotelName": "Sheraton 2",
+    "location": "Tucumán",
+    "roomType": "Single",
+    "pricePerNight": 4150,
+    "availableFrom": "02/01/2021",
+    "availableTo": "19/02/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "SE-0001",
+    "hotelName": "Selina",
+    "location": "Bogotá",
+    "roomType": "Single",
+    "pricePerNight": 3900,
+    "availableFrom": "23/01/2021",
+    "availableTo": "23/11/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "SE-0002",
+    "hotelName": "Selina 2",
+    "location": "Bogotá",
+    "roomType": "Doble",
+    "pricePerNight": 5840,
+    "availableFrom": "23/01/2021",
+    "availableTo": "15/10/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "EC-0003",
+    "hotelName": "El Campín",
+    "location": "Bogotá",
+    "roomType": "Triple",
+    "pricePerNight": 7020,
+    "availableFrom": "15/02/2021",
+    "availableTo": "27/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "CP-0004",
+    "hotelName": "Central Plaza",
+    "location": "Medellín",
+    "roomType": "Multiple",
+    "pricePerNight": 8600,
+    "availableFrom": "01/03/2021",
+    "availableTo": "17/04/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "CP-0002",
+    "hotelName": "Central Plaza 2",
+    "location": "Medellín",
+    "roomType": "Doble",
+    "pricePerNight": 6400,
+    "availableFrom": "10/02/2021",
+    "availableTo": "20/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "BG-0004",
+    "hotelName": "Bocagrande",
+    "location": "Cartagena",
+    "roomType": "Multiple",
+    "pricePerNight": 9370,
+    "availableFrom": "17/04/2021",
+    "availableTo": "12/06/2021",
+    "isReserved": false
+  }
+]
