@@ -3,6 +3,7 @@ package com.itbqualitychallenge.bookings.repositories;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.itbqualitychallenge.bookings.dtos.FlightDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
@@ -14,12 +15,15 @@ import java.util.HashMap;
 
 @Repository
 public class FlightsReservationRepositoryImple implements FlightsReservationRepository{
-    private HashMap<String, FlightDTO> flightRepo = new HashMap<>();
+    private final HashMap<String, FlightDTO> flightRepo = new HashMap<>();
 
-    public void loadFromFile(String filename) {
+    @Value("${dbFlights}")
+    private String filename;
+
+    public Object loadFromFile() {
         File file = null;
         try {
-            file = ResourceUtils.getFile(filename);
+            file = ResourceUtils.getFile(this.filename);
 
         }catch (FileNotFoundException e){
             //TODO: Fix this
@@ -38,10 +42,10 @@ public class FlightsReservationRepositoryImple implements FlightsReservationRepo
         for (FlightDTO flight:db){
             flightRepo.put(flight.getFlightNumber(),flight);
         }
-
+        return this.flightRepo;
     }
 
-    public void saveToFile(String filename) {
+    public void saveToFile() {
         //TODO: Implement Serialization
     }
 

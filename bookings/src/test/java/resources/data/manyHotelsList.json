@@ -1,0 +1,32 @@
+[
+  {
+    "hotelCode": "CH-0002",
+    "hotelName": "Cataratas Hotel",
+    "location": "Puerto Iguazú",
+    "roomType": "Doble",
+    "pricePerNight": 6300,
+    "availableFrom": "10/02/2021",
+    "availableTo": "20/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "CH-0003",
+    "hotelName": "Cataratas Hotel 2",
+    "location": "Puerto Iguazú",
+    "roomType": "Triple",
+    "pricePerNight": 8200,
+    "availableFrom": "10/02/2021",
+    "availableTo": "23/03/2021",
+    "isReserved": false
+  },
+  {
+    "hotelCode": "HB-0001",
+    "hotelName": "Hotel Bristol",
+    "location": "Buenos Aires",
+    "roomType": "Single",
+    "pricePerNight": 5435,
+    "availableFrom": "10/02/2021",
+    "availableTo": "19/03/2021",
+    "isReserved": false
+  }
+]

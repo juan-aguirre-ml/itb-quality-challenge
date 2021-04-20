@@ -4,43 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9325d51c-deea-4ad4-904d-b99541b42aca" name="Default Changelist" comment="Did some work">
-      <change afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/controllers/ExceptionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/HotelUnavailableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/InvalidPaymentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/ParameterQuantityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/PayloadValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/integration/HotelListIntegrationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/repositories/HotelsReservationRepositoryImpleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/services/HotelsReservationServiceImpleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/utils/HotelFiltersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/utils/HotelQueryDTOValidatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/utils/HotelReservationValidatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/data/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_error.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidUsername.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_ok.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_roomsize_ok.json" afterDir="false" />
+    <list default="true" id="9325d51c-deea-4ad4-904d-b99541b42aca" name="Default Changelist" comment="Did some more work">
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/data/booking_ok.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/data/cataratasHotels.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/data/manyHotelsList.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/data/oneHotelList.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidCardNumber.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidCreditDue.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidDateRange.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidDates.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidDebitDue.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_mismatchroomsize.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_payment_ok.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_validDates.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/controllers/ExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/controllers/ExceptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/controllers/HotelsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/controllers/HotelsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/HotelReservationPayloadDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/HotelReservationPayloadDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/StatusCodeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/StatusCodeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/InvalidOriginException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/InvalidOriginException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/FlightDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/FlightDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/HotelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/dtos/HotelDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/TooMuchPeopleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/exceptions/TooMuchPeopleException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/FlightsReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/FlightsReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/FlightsReservationRepositoryImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/FlightsReservationRepositoryImple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/HotelsReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/HotelsReservationRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/HotelsReservationRepositoryImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/HotelsReservationRepositoryImple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/UsersRepositoryImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/UsersRepositoryImple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/UsersRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/repositories/UsersRepositoryImple.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/services/HotelsReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/services/HotelsReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/services/HotelsReservationServiceImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/services/HotelsReservationServiceImple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/FlightQueryDTOValidator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/HotelFilters.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/HotelFilters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/HotelQueryDTOValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/HotelQueryDTOValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/HotelReservationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/HotelReservationValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/ObjectDTOValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/ObjectDTOValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/PayloadValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/java/com/itbqualitychallenge/bookings/utils/PayloadValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings/src/main/resources/validationMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/resources/errorMessages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/main/resources/dbHotels.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/main/resources/dbHotels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/integration/HotelListIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/integration/HotelListIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/services/HotelsReservationServiceImpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/services/HotelsReservationServiceImpleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/utils/HotelReservationValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/test/java/com/itbqualitychallenge/bookings/utils/HotelReservationValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidUsername.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_invalidUsername.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_ok.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_ok.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_roomsize_ok.json" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/src/test/java/resources/payloads/payload_roomsize_ok.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +93,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bookings/target/classes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bookings/src/test/java/resources/payloads" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -102,6 +105,7 @@
       <recent name="com.itbqualitychallenge.bookings.exceptions" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bookings/src/test/java/resources/payloads" />
       <recent name="$PROJECT_DIR$/bookings/target/classes" />
       <recent name="$PROJECT_DIR$/bookings/src/main/resources" />
     </key>
@@ -121,7 +125,7 @@
       <recent name="com.itbqualitychallenge.bookings.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HotelReservationValidatorTest">
+  <component name="RunManager" selected="JUnit.HotelsReservationServiceImpleTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -135,64 +139,93 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelQueryDTOValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AllTests" type="JUnit" factoryName="JUnit">
+      <module name="itb-quality-challenge" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="PACKAGE_NAME" value="com.itbqualitychallenge" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelsReservationServiceImpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookings" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itbqualitychallenge.bookings.utils.*" />
+          <option name="PATTERN" value="com.itbqualitychallenge.bookings.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.utils.HotelQueryDTOValidatorTest" />
+      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.services" />
+      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.services.HotelsReservationServiceImpleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelQueryDTOValidatorTest.invalidParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelsReservationServiceImpleTest.getHotels_3Param_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookings" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itbqualitychallenge.bookings.utils.*" />
+          <option name="PATTERN" value="com.itbqualitychallenge.bookings.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.utils.HotelQueryDTOValidatorTest" />
-      <option name="METHOD_NAME" value="invalidParameters" />
+      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.services" />
+      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.services.HotelsReservationServiceImpleTest" />
+      <option name="METHOD_NAME" value="getHotels_3Param_ok" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelQueryDTOValidatorTest.threeParameters_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelsReservationServiceImpleTest.getHotels_noParam_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookings" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itbqualitychallenge.bookings.utils.*" />
+          <option name="PATTERN" value="com.itbqualitychallenge.bookings.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.utils.HotelQueryDTOValidatorTest" />
-      <option name="METHOD_NAME" value="threeParameters_ok" />
+      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.services" />
+      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.services.HotelsReservationServiceImpleTest" />
+      <option name="METHOD_NAME" value="getHotels_noParam_ok" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelReservationValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelsReservationServiceImpleTest.listAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookings" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itbqualitychallenge.bookings.utils.*" />
+          <option name="PATTERN" value="com.itbqualitychallenge.bookings.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.utils.HotelReservationValidatorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.services" />
+      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.services.HotelsReservationServiceImpleTest" />
+      <option name="METHOD_NAME" value="listAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelsReservationServiceImpleTest.makeHotelReservation_ok" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookings" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itbqualitychallenge.bookings.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itbqualitychallenge.bookings.services" />
+      <option name="MAIN_CLASS_NAME" value="com.itbqualitychallenge.bookings.services.HotelsReservationServiceImpleTest" />
+      <option name="METHOD_NAME" value="makeHotelReservation_ok" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -204,12 +237,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BookingsApplication" />
+      <item itemvalue="JUnit.AllTests" />
+      <item itemvalue="JUnit.HotelsReservationServiceImpleTest.listAll" />
+      <item itemvalue="JUnit.HotelsReservationServiceImpleTest.getHotels_noParam_ok" />
+      <item itemvalue="JUnit.HotelsReservationServiceImpleTest.getHotels_3Param_ok" />
+      <item itemvalue="JUnit.HotelsReservationServiceImpleTest.makeHotelReservation_ok" />
+      <item itemvalue="JUnit.HotelsReservationServiceImpleTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HotelReservationValidatorTest" />
-        <item itemvalue="JUnit.HotelQueryDTOValidatorTest" />
-        <item itemvalue="JUnit.HotelQueryDTOValidatorTest.threeParameters_ok" />
-        <item itemvalue="JUnit.HotelQueryDTOValidatorTest.invalidParameters" />
+        <item itemvalue="JUnit.HotelsReservationServiceImpleTest" />
+        <item itemvalue="JUnit.HotelsReservationServiceImpleTest.makeHotelReservation_ok" />
+        <item itemvalue="JUnit.HotelsReservationServiceImpleTest.getHotels_3Param_ok" />
+        <item itemvalue="JUnit.HotelsReservationServiceImpleTest.getHotels_noParam_ok" />
+        <item itemvalue="JUnit.HotelsReservationServiceImpleTest.listAll" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +265,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618496748512</updated>
       <workItem from="1618496753648" duration="349000" />
-      <workItem from="1618497106267" duration="86236000" />
+      <workItem from="1618497106267" duration="95443000" />
     </task>
     <task id="LOCAL-00001" summary="Did some work">
       <created>1618811733258</created>
@@ -231,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618811733258</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Did some more work">
+      <created>1618900021725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618900021725</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +301,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Did some work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Did some work" />
+    <MESSAGE value="Did some more work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did some more work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -269,10 +320,20 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/itb_quality_challenge$HotelsReservationServiceImpleTest_getHotels_noParam_ok.ic" NAME="HotelsReservationServiceImpleTest.getHotels_noParam_ok Coverage Results" MODIFIED="1618930474299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.itbqualitychallenge.bookings.services.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/itb_quality_challenge$HotelsReservationServiceImpleTest_makeHotelReservation_ok.ic" NAME="HotelsReservationServiceImpleTest.makeHotelReservation_ok Coverage Results" MODIFIED="1618931981813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.itbqualitychallenge.bookings.services.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/itb_quality_challenge$HotelQueryDTOValidatorTest.ic" NAME="HotelQueryDTOValidatorTest Coverage Results" MODIFIED="1618887156333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.itbqualitychallenge.bookings.utils.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/itb_quality_challenge$HotelReservationValidatorTest.ic" NAME="HotelReservationValidatorTest Coverage Results" MODIFIED="1618898002889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/itb_quality_challenge$AllTests.ic" NAME="AllTests Coverage Results" MODIFIED="1618927996254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/itb_quality_challenge$HotelsReservationServiceImpleTest_getHotels_3Param_ok.ic" NAME="HotelsReservationServiceImpleTest.getHotels_3Param_ok Coverage Results" MODIFIED="1618931561756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.itbqualitychallenge.bookings.services.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/itb_quality_challenge$HotelReservationValidatorTest.ic" NAME="HotelReservationValidatorTest Coverage Results" MODIFIED="1618926853475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.itbqualitychallenge.bookings.utils.*</FILTER>
     </SUITE>
   </component>

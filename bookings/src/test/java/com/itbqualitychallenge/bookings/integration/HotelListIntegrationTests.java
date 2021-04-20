@@ -18,7 +18,7 @@ import java.util.List;
 @WebMvcTest
 public class HotelListIntegrationTests {
     private List<HotelDTO> hotels;
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Autowired
     MockMvc mockMvc;

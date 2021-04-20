@@ -1,0 +1,12 @@
+[
+  {
+    "hotelCode": "CH-0002",
+    "hotelName": "Cataratas Hotel",
+    "location": "Puerto Iguazú",
+    "roomType": "Doble",
+    "pricePerNight": 6300,
+    "availableFrom": "10/02/2021",
+    "availableTo": "20/03/2021",
+    "isReserved": false
+  }
+]

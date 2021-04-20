@@ -31,8 +31,9 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
 
     private final HotelsReservationRepository hotelRepo;
 
-    public HotelsReservationServiceImple(HotelsReservationRepository hotelRepo) {
+    public HotelsReservationServiceImple(HotelsReservationRepository hotelRepo) throws FileNotFoundException {
         this.hotelRepo = hotelRepo;
+        this.hotelRepo.loadFromFile();
     }
 
 
@@ -43,7 +44,7 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
         so it should be a valid query.
          */
 
-        hotelRepo.loadFromFile(hotelRepoFilename);
+        hotelRepo.loadFromFile();
         ArrayList<HotelDTO> arr = hotelRepo.getAll();
         HotelFilters filters = new HotelFilters();
         arr = filters.filter(arr, query);
@@ -55,7 +56,8 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
         /*
         This should process everything and change the reserved column to True afterwards.
          */
-        hotelRepo.loadFromFile(hotelRepoFilename);
+        hotelRepo.loadFromFile();
+        ArrayList<HotelDTO> hotels = hotelRepo.getAll();
         HotelReservationDTO reservation = new HotelReservationDTO();
 
         String username = hotelPayload.getUserName();
@@ -63,7 +65,12 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
         HotelBookingDTO booking = hotelPayload.getBooking();
         reservation.setBooking(booking);
 
-        HotelDTO hotel = (HotelDTO) this.hotelRepo.getItemById(booking.getHotelCode());
+        HotelDTO hotel = null;
+        for (HotelDTO hot:hotels){
+            if (hot.getHotelCode().equals(booking.getHotelCode()))
+                hotel = hot;
+        }
+
         if (hotel == null){
             throw new HotelNotFoundException(hotelErrorNotFound);
         }

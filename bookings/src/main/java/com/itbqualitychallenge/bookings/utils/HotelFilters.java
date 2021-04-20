@@ -2,13 +2,10 @@ package com.itbqualitychallenge.bookings.utils;
 
 import com.itbqualitychallenge.bookings.dtos.HotelDTO;
 import com.itbqualitychallenge.bookings.dtos.HotelQueryDTO;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class HotelFilters{
@@ -27,7 +24,7 @@ public class HotelFilters{
 
     public ArrayList<HotelDTO> filter(ArrayList<HotelDTO> arr, HotelQueryDTO query){
 
-        if (query != null) {
+        if (query != null && query.getDestination()!=null && query.getDateFrom()!= null && query.getDateTo()!= null ) {
             ArrayList<HotelDTO> tmp = new ArrayList<>();
             for (HotelDTO hotel:arr){
                 if (meetsCondition(hotel,query.getDateFrom(),query.getDateTo(),query.getDestination())){

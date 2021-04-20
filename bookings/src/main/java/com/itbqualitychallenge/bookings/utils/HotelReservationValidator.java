@@ -5,7 +5,6 @@ import com.itbqualitychallenge.bookings.dtos.HotelReservationPayloadDTO;
 import com.itbqualitychallenge.bookings.dtos.PaymentMethodDTO;
 import com.itbqualitychallenge.bookings.dtos.UserDTO;
 import com.itbqualitychallenge.bookings.exceptions.*;
-import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDate;
@@ -117,13 +116,13 @@ public class HotelReservationValidator implements PayloadValidator {
     }
 
     public void validatePaymentMethod(PaymentMethodDTO paymentMethodDTO ) throws DebitDuesException, InvalidCardNumberException, CreditDuesException {
-        Pattern ccv = Pattern.compile("(\\d{4}[-. ]?){4}|\\d{4}[-. ]?\\d{6}[-. ]?\\d{5}");
+        Pattern ccv = Pattern.compile("(\\d{4}[-\\s]?){3}\\d{4}");
 
         if (ccv.matcher(paymentMethodDTO.getNumber()).matches()) {
             if ("debit".equalsIgnoreCase(paymentMethodDTO.getType())) {
-                if (paymentMethodDTO.getDues() != 1) {
+                if (paymentMethodDTO.getDues() != 1)
                     throw new DebitDuesException(cardDebitDues);
-            } else {
+            if ("credit".equalsIgnoreCase(paymentMethodDTO.getType())){
                 if (paymentMethodDTO.getDues() != 3 || paymentMethodDTO.getDues() != 6 || paymentMethodDTO.getDues() != 12)
                     throw new CreditDuesException(cardCreditDues);
             }

@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 public interface HotelsReservationRepository extends BaseRepository{
 
-    public ArrayList<HotelDTO> getAll();
-    public void setAsReserved(String hotelCode);
+    ArrayList<HotelDTO> getAll();
+    void setAsReserved(String hotelCode);
+    HotelDTO getItemById(String id);
+
 
 }

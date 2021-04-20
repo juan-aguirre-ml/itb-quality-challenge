@@ -56,7 +56,7 @@ class HotelReservationValidatorTest {
     @DisplayName("Invalid email syntax test.")
     void validatePayload_invalidUsernameException() throws IOException {
         HotelReservationPayloadDTO hotel = objectMapper.readValue(
-                new File("src/test/java/resources/payloads/payloads/payload_invalidUsername.json"),
+                new File("src/test/java/resources/payloads/payload_invalidUsername.json"),
                 new TypeReference<>() {
                 });
         assertThrows(InvalidEmailException.class, () -> validator.validatePayload(hotel));
@@ -67,7 +67,7 @@ class HotelReservationValidatorTest {
     @DisplayName("Validate date formatting and basic logic OK.")
     void validateDates_ok() throws IOException {
         HotelBookingDTO booking = objectMapper.readValue(
-                new File("src/test/java/resources/payloads/payload_invalidUsername.json"),
+                new File("src/test/java/resources/payloads/payload_validDates.json"),
                 new TypeReference<>() {
                 });
         assertDoesNotThrow(() -> validator.validateDates(booking));
@@ -75,10 +75,10 @@ class HotelReservationValidatorTest {
     }
 
     @Test
-    @DisplayName("Validate date formatting and basic logic OK.")
+    @DisplayName("Validate date formatting and basic logic failure.")
     void validateDates_badFormat() throws IOException {
         HotelBookingDTO booking = objectMapper.readValue(
-                new File("src/test/java/resources/payloads/payload_invalidUsername.json"),
+                new File("src/test/java/resources/payloads/payload_invalidDates.json"),
                 new TypeReference<>() {
                 });
         assertThrows(DateTimeParseException.class, () -> validator.validateDates(booking));
@@ -88,7 +88,7 @@ class HotelReservationValidatorTest {
     @DisplayName("Validate date range.")
     void validateDates_invalidRange() throws IOException {
         HotelBookingDTO booking = objectMapper.readValue(
-                new File("src/test/java/resources/payloads/payload_invalidUsername.json"),
+                new File("src/test/java/resources/payloads/payload_invalidDateRange.json"),
                 new TypeReference<>() {
                 });
         assertThrows(InvalidDateRangeException.class, () -> validator.validateDates(booking));

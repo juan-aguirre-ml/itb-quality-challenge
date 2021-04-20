@@ -5,27 +5,29 @@ import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.itbqualitychallenge.bookings.dtos.HotelDTO;
-import com.itbqualitychallenge.bookings.dtos.HotelReservationDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 @Repository
 public class HotelsReservationRepositoryImple implements HotelsReservationRepository{
 
-    private HashMap<String, HotelDTO> hotelRepo = new HashMap<>();
-    private String filename = null;
+    private final HashMap<String, HotelDTO> hotelRepo = new HashMap<>();
 
-    public void loadFromFile(String filename) throws FileNotFoundException {
-        this.filename = filename;
+    @Value("${dbHotels}")
+    private String filename;
+
+    public Map<String, HotelDTO> loadFromFile() throws FileNotFoundException {
         File file = null;
 
-        file = ResourceUtils.getFile(filename);
+        file = ResourceUtils.getFile(this.filename);
         ObjectMapper mapper = new ObjectMapper();
         TypeReference<ArrayList<HotelDTO>> typeRef = new TypeReference<ArrayList<HotelDTO>>() {};
         ArrayList<HotelDTO> db = new ArrayList<>();
@@ -38,14 +40,15 @@ public class HotelsReservationRepositoryImple implements HotelsReservationReposi
         for (HotelDTO hotel:db){
             hotelRepo.put(hotel.getHotelCode(),hotel);
         }
+        return this.hotelRepo;
 
     }
 
-    public void saveToFile(String filename) {
+    public void saveToFile() {
         try {
             ObjectMapper mapper = new ObjectMapper();
             ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
-            writer.writeValue(ResourceUtils.getFile(filename), getAll());
+            writer.writeValue(ResourceUtils.getFile(this.filename), getAll());
 
 
         } catch (Exception ex) {
@@ -55,7 +58,7 @@ public class HotelsReservationRepositoryImple implements HotelsReservationReposi
 
     @Override
     public HotelDTO getItemById(String id) {
-        return this.hotelRepo.getOrDefault(id,null);
+        return this.hotelRepo.get(id);
     }
 
     @Override
@@ -70,7 +73,7 @@ public class HotelsReservationRepositoryImple implements HotelsReservationReposi
             hotel.setIsReserved(true);
         }
         //TODO Call for a saveToDisk to persist reservations.
-        saveToFile(this.filename);
+        saveToFile();
     }
 
 

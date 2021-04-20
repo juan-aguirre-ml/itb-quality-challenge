@@ -17,10 +17,5 @@ public class ExceptionController {
         return new ResponseEntity<>(new StatusCodeDTO(400, exception.getMessage()), HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler({QueryValidationException.class})
-    public ResponseEntity<StatusCodeDTO> badRequest(RuntimeException exception) {
-        exception.printStackTrace();
-        return new ResponseEntity<>(new StatusCodeDTO(400, exception.getMessage()), HttpStatus.BAD_REQUEST);
-    }
 }
 

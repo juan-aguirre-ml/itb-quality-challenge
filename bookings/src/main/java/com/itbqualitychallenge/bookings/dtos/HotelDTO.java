@@ -3,8 +3,6 @@ package com.itbqualitychallenge.bookings.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

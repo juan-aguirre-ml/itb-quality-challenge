@@ -6,5 +6,5 @@ import com.itbqualitychallenge.bookings.exceptions.ParameterQuantityException;
 import com.itbqualitychallenge.bookings.exceptions.QueryValidationException;
 
 public interface ObjectDTOValidator<T>{
-    public T validate(T object) throws QueryValidationException, InvalidDestinationException, InvalidDateRangeException, ParameterQuantityException;
+    T validate(T object) throws QueryValidationException, InvalidDestinationException, InvalidDateRangeException, ParameterQuantityException;
 }
