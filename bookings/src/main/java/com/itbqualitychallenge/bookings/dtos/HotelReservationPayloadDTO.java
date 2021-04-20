@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HotelReservationPayloadDTO {
-    private String username;
+    private String userName;
     private HotelBookingDTO booking;
 }

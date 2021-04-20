@@ -54,7 +54,7 @@ public class UsersRepositoryImple implements UsersRepository{
 
     public UserDTO getUserByUsername(String username){
         for (UserDTO user: this.userRepo.values()){
-            if (user.getEmail().equals(username)){
+            if (user.getMail().equals(username)){
                 return user;
             }
         }

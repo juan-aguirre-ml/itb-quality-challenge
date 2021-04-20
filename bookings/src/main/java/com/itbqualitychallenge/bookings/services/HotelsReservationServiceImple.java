@@ -2,44 +2,51 @@ package com.itbqualitychallenge.bookings.services;
 
 import com.itbqualitychallenge.bookings.dtos.*;
 import com.itbqualitychallenge.bookings.exceptions.HotelNotFoundException;
+import com.itbqualitychallenge.bookings.exceptions.HotelUnavailableException;
+import com.itbqualitychallenge.bookings.exceptions.InvalidPaymentException;
 import com.itbqualitychallenge.bookings.repositories.HotelsReservationRepository;
-import com.itbqualitychallenge.bookings.repositories.UsersRepositoryImple;
 import com.itbqualitychallenge.bookings.utils.HotelFilters;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 @Service
 public class HotelsReservationServiceImple implements HotelsReservationService{
 
-
     private static final String AMOUNT = "amount";
     private static final String INTEREST = "interest";
     private static final String TOTAL = "total";
 
-    @Autowired
-    private HotelsReservationRepository hotelRepo;
-
     @Value("${dbHotels}")
     String hotelRepoFilename;
+    @Value("${hotel.error.not.found}")
+    String hotelErrorNotFound;
+    @Value("${hotel.error.unavailable}")
+    String hotelErrorUnavailable;
+    @Value("${payment.error.default}")
+    String paymentErrorDefault;
 
-    @Autowired
-    private UsersRepositoryImple usersRepo;
+    private final HotelsReservationRepository hotelRepo;
+
+    public HotelsReservationServiceImple(HotelsReservationRepository hotelRepo) {
+        this.hotelRepo = hotelRepo;
+    }
 
 
     @Override
-    public ArrayList<HotelDTO> getHotelsFromRepo(HotelQueryDTO query) {
+    public ArrayList<HotelDTO> getHotelsFromRepo(HotelQueryDTO query) throws FileNotFoundException {
         /*
-        This shoud handle the filtering of the list and return it. The query will be already sanitized by the controller
+        This should handle the filtering of the list and return it. The query will be already sanitized by the controller
         so it should be a valid query.
          */
 
         hotelRepo.loadFromFile(hotelRepoFilename);
         ArrayList<HotelDTO> arr = hotelRepo.getAll();
-        HotelFilters.filter(arr, query);
+        HotelFilters filters = new HotelFilters();
+        arr = filters.filter(arr, query);
         return arr;
     }
 
@@ -48,17 +55,20 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
         /*
         This should process everything and change the reserved column to True afterwards.
          */
-
+        hotelRepo.loadFromFile(hotelRepoFilename);
         HotelReservationDTO reservation = new HotelReservationDTO();
 
-        String username = hotelPayload.getUsername();
+        String username = hotelPayload.getUserName();
         reservation.setUsername(username);
         HotelBookingDTO booking = hotelPayload.getBooking();
         reservation.setBooking(booking);
 
         HotelDTO hotel = (HotelDTO) this.hotelRepo.getItemById(booking.getHotelCode());
         if (hotel == null){
-            throw new HotelNotFoundException("${hotel.error.not.found}");
+            throw new HotelNotFoundException(hotelErrorNotFound);
+        }
+        if (Boolean.TRUE.equals(hotel.getIsReserved())){
+            throw new HotelUnavailableException(hotelErrorUnavailable);
         }
 
         //Process payment details
@@ -67,11 +77,13 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
         reservation.setAmount(paymentDetails.get(AMOUNT));
         reservation.setInterest(paymentDetails.get(INTEREST));
         reservation.setTotal(paymentDetails.get(TOTAL));
+        hotelRepo.setAsReserved(hotel.getHotelCode());
+
         return reservation;
 
     }
 
-    private HashMap<String, Float> getPaymentDetails(PaymentMethodDTO payment, int price) throws Exception {
+    private HashMap<String, Float> getPaymentDetails(PaymentMethodDTO payment, int price) throws InvalidPaymentException {
         HashMap<String,Float> paymentInfo = new HashMap<>();
 
         switch (payment.getDues()){
@@ -96,8 +108,7 @@ public class HotelsReservationServiceImple implements HotelsReservationService{
                 paymentInfo.put(TOTAL,price*1.15F);
                 return paymentInfo;
             default:
-                //TODO: Make a real exception
-                throw new Exception("Something went wrong processing the payment.");
+                throw new InvalidPaymentException(paymentErrorDefault);
         }
     }
 
